@@ -1,0 +1,37 @@
+{
+  "name": "airbnb-photo-gallery",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server",
+    "build": "webpack -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/esteban-q-diaz/airbnb-photo-gallery.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/esteban-q-diaz/airbnb-photo-gallery/issues"
+  },
+  "homepage": "https://github.com/esteban-q-diaz/airbnb-photo-gallery#readme",
+  "dependencies": {
+    "nodemon": "^2.0.7",
+    "path": "^0.12.7",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-icons": "^4.2.0",
+    "react-image": "^4.0.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "@babel/preset-react": "^7.12.13",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.25.1",
+    "webpack-cli": "^4.5.0"
+  }
+}
