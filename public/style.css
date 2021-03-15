@@ -23,6 +23,20 @@ body
   margin-left: 68px;
   justify-content: flex-start;
 }
+
+.leftImg {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.rightTopImg {
+  border-top-right-radius: 15px;
+}
+
+.rightBottomImg {
+  border-bottom-right-radius: 15px;
+}
+
 .star{
   padding-right: 0.2%;
   align-items: center;
