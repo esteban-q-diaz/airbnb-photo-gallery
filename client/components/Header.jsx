@@ -13,7 +13,7 @@ function Header() {
         <div class="star">
           <AiTwotoneStar color="red"/>
         </div>
-        
+
         <div class="header-1">
           <p>4.98 (41) ·</p>
         </div>
