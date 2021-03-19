@@ -1,18 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {AiTwotoneStar} from "react-icons/ai";
 import { FiShare } from "react-icons/fi";
 import { BsHeart } from "react-icons/bs";
 import { IoIosArrowBack } from "react-icons/io";
+import { Link } from 'react-router-dom';
 
-function Images() {
+function Images( { showGallery } ) {
+  const [dimensions, setDimensions] = useState({ width:0, height: 0 });
+
   return (
 
     <div className="imagesContainer">
 
       <div className="flexIcons">
-
       <div className="flexIconsA">
-        <IoIosArrowBack size={25}/>
+        <Link to='/'>
+        <IoIosArrowBack onClick={()=>{showGallery()}} size={25}/>
+      </Link>
+
+
+
+
         </div>
         <div className="flexIconsB">
           <FiShare className="shareImgIcon" size={20} />

@@ -1,11 +1,10 @@
 import React from 'react';
 import {Img} from 'react-image'
+import { Link } from 'react-router-dom';
 
 function PhotoGallery({ showMenu }) {
   return (
     <div>
-
-
 
       <div  class='imageContainer'>
 
@@ -35,8 +34,10 @@ function PhotoGallery({ showMenu }) {
         </div>
 </div>
       </div>
+      <Link to='/images'>
+        <input type='submit' class="btn" value="Show All Photos" />
+      </Link>
 
-      <input type='button' class="btn" value="Show All Photos" onClick={()=>{showMenu()}}/>
     </div>
   )
 }

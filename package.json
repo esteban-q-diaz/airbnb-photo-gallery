@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server",
+    "start": "nodemon server/server.js",
     "build": "webpack -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,18 +19,23 @@
   },
   "homepage": "https://github.com/esteban-q-diaz/airbnb-photo-gallery#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
     "nodemon": "^2.0.7",
     "path": "^0.12.7",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-icons": "^4.2.0",
-    "react-image": "^4.0.3"
+    "react-image": "^4.0.3",
+    "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.13.10",
     "@babel/preset-env": "^7.13.10",
     "@babel/preset-react": "^7.12.13",
     "babel-loader": "^8.2.2",
+    "html-webpack-plugin": "^5.3.1",
     "webpack": "^5.25.1",
     "webpack-cli": "^4.5.0"
   }

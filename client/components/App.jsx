@@ -9,8 +9,6 @@ import Images from './Images'
 function App() {
   const [searchMenu, setSearchMenu] = useState(false);
   const [modal, setModal] = useState(false)
-  const [images, setImages] = useState(false)
-
   const showMenu = () => {
     console.log('i am here')
     setSearchMenu(prevState => !prevState)
@@ -20,19 +18,29 @@ function App() {
     setModal(p=>!p)
   }
 
-  return (
-    <Router>
-    <div>
-      {searchMenu ? <SearchMenu /> : <NavBar showMenu={showMenu}/>}
-      {modal ? <h1> this one</h1> : null}
-      <Header />
-      <PhotoGallery setModal={setModal}/>
 
+
+  return (
+
+    <div>
+
+
+<Router>
       <Switch>
-        <Route path="/images" component={Images} />
+        <Route path="/images" exact>
+          <Images />
+        </Route>
+
+        <Route path="/" exact>
+          {searchMenu ? <SearchMenu /> : <NavBar showMenu={showMenu}/>}
+          <Header />
+          <PhotoGallery setModal={setModal}/>
+        </Route>
+
       </Switch>
-    </div>
-    </Router>
+  </Router>
+</div>
+
   )
 }
 
