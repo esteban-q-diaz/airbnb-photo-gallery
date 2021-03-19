@@ -9,6 +9,7 @@ import Images from './Images'
 function App() {
   const [searchMenu, setSearchMenu] = useState(false);
   const [modal, setModal] = useState(false)
+  const [images, setImages] = useState(false)
 
   const showMenu = () => {
     console.log('i am here')
@@ -26,9 +27,10 @@ function App() {
       {modal ? <h1> this one</h1> : null}
       <Header />
       <PhotoGallery setModal={setModal}/>
-      {/* <Switch> */}
-      {/* <Route path="/" component={Images} />
-      </Switch> */}
+
+      <Switch>
+        <Route path="/images" component={Images} />
+      </Switch>
     </div>
     </Router>
   )
