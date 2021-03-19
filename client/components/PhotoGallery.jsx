@@ -1,7 +1,7 @@
 import React from 'react';
 import {Img} from 'react-image'
 
-function PhotoGallery() {
+function PhotoGallery({ showMenu }) {
   return (
     <div>
 
@@ -36,7 +36,7 @@ function PhotoGallery() {
 </div>
       </div>
 
-      <input type='button' class="btn" value="Show All Photos"/>
+      <input type='button' class="btn" value="Show All Photos" onClick={()=>{showMenu()}}/>
     </div>
   )
 }

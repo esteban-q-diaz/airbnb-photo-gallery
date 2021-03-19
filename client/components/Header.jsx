@@ -1,6 +1,7 @@
 import React from 'react';
 import {AiTwotoneStar} from "react-icons/ai";
-import {IconContext} from 'react-icons'
+import { FiShare } from "react-icons/fi";
+import { BsHeart } from "react-icons/bs";
 
 function Header() {
   return (
@@ -19,24 +20,31 @@ function Header() {
         </div>
 
         <div class="header-2">
-          <p>superhost ·</p>
+          <p>Superhost ·</p>
         </div>
 
         <div class="header-3">
-          <p>Piha, Auckland, New Zealand</p>
+          <a href="">Piha, Auckland, New Zealand</a>
         </div>
 
 
       <div class="flexTwo">
         <div class="header-4">
-          <a href="">Share</a>
+          <a href="" class='share'>Share</a>
         </div>
 
-        <div class="header-5">
+        <div class="saveIcon">
+          <FiShare class="saveIcon" size={15} />
+        </div>
+
+        </div>
+ <div class="header-5">
           <a href="">Save</a>
         </div>
-        </div>
 
+        <div class="shareIcon">
+          <BsHeart class="shareIcon" size={15} />
+        </div>
  </div>
     </div>
   )

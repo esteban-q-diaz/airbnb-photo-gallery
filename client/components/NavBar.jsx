@@ -1,30 +1,27 @@
 import React, { useState } from 'react';
 import { IoSearchCircle } from "react-icons/io5";
-import NavBottom from './NavBottom'
+import { FaUserCircle } from "react-icons/fa";
+import { FiShare } from "react-icons/fi";
 
-function NavBar() {
-  const [modalState, setModal] = useState(false)
-
-  const showSearchMenu = () => {
-    setModal(prevState => !prevState)
-  }
-
+function NavBar({ showMenu }) {
   return (
     <div class='container'>
       <div class="navFlex">
-
         <div class="flexLogo">
           <img class='airlogo' src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c513.png" />
         </div>
 
       <div class="flexSearch">
-        <i class="fa fa-key icon"></i>
-        <input type="button" value="Start your search" class="navSearch" name="search" placeholder="Start Your Search" onClick={() => showSearchMenu()}/>
+        <input type="submit" value="Start your search" class="navSearch" name="search" onClick={() => showMenu()}/>
       </div>
 
 
       <div class='searchIcon'>
         <IoSearchCircle color="red"  size={45} />
+      </div>
+
+      <div class='userIcon'>
+        <FaUserCircle size={30} />
       </div>
 
       <div class="flexHost">
@@ -45,6 +42,11 @@ function NavBar() {
         <div class="hamburger"></div>
       </div>
       </div>
+
+
+      {/* <div>
+      <NavBottom />
+      </div> */}
     </div>
   )
 }
