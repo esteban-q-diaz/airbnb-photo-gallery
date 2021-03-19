@@ -49,7 +49,7 @@ function SearchMenu() {
         <p className="experienceText">Experience</p>
       </div>
 
-      <div class='userIcon2'>
+      <div className='userIcon2'>
         <FaUserCircle size={30} />
       </div>
 
@@ -59,7 +59,7 @@ function SearchMenu() {
       </div>
 
       <div className="flexWeb">
-        <img className="webIcon" src="https://www.flaticon.com/svg/vstatic/svg/876/876759.svg?token=exp=1615939427~hmac=a08d7e728c038642643e069345a57dde" />
+        <img className="webIcon" src="https://airbnb-clone-airbnb-be-my-first-job.s3-us-west-1.amazonaws.com/global.png" />
       </div>
 
       <div className='flexButton'>
@@ -90,13 +90,13 @@ function SearchMenu() {
             <input type="button" className="checkOut" className={`checkOut checkOut-${checkOut}`}></input>
           </div>
 
-          <div class="guestsClick" className={`guestsDiv guestsDiv-${guests}`}>
+          <div className="guestsClick" className={`guestsDiv guestsDiv-${guests}`}>
             <input type="button" className="guests" className={`guests guests-${guests}`} />
           </div>
 
-          <div class="searchClick" >
+          <div className="searchClick" >
             <input type="button" className="searchBtn"/>
-            <BiSearch class="glass" color="#fff" size={22} />
+            <BiSearch className="glass" color="#fff" size={22} />
           </div>
 
 
@@ -104,28 +104,29 @@ function SearchMenu() {
 
         </div>
 
-          <div class="locationTextDiv"  >
-            <h1 onClick={()=>{showLocation()}} class="locationText">Location</h1>
+          <div className="locationTextDiv"  >
+            <h1 onClick={()=>{showLocation()}} className="locationText">Location</h1>
+            
           </div>
 
-          <div class="checkInTextDiv"  >
-            <h1 onClick={()=>{showCheckIn()}} class="checkInText">Check in</h1>
-            <p class="checkInText2">Add Dates</p>
+          <div className="checkInTextDiv"  >
+            <h1 onClick={()=>{showCheckIn()}} className="checkInText">Check in</h1>
+            <p className="checkInText2">Add Dates</p>
           </div>
 
-          <div class="checkOutTextDiv" >
-            <h1 onClick={()=>{showCheckOut()}}  class="checkOutText">Check out</h1>
-            <p class="checkOutText">Add Dates</p>
+          <div className="checkOutTextDiv" >
+            <h1 onClick={()=>{showCheckOut()}}  className="checkOutText">Check out</h1>
+            <p className="checkOutText2">Add Dates</p>
           </div>
 
 
-          <div class="guestTextDiv" o >
-            <h1 onClick={()=>{showGuests()}} class="guestText">Guests</h1>
-            <p class="guestText2">Add Guests</p>
+          <div className="guestTextDiv" o >
+            <h1 onClick={()=>{showGuests()}} className="guestText">Guests</h1>
+            <p className="guestText2">Add Guests</p>
           </div>
 
-          <div class="searchGuestsDiv" >
-            <h1 onClick={()=>{showGuests()}} class="searchGuests">Search</h1>
+          <div className="searchGuestsDiv" >
+            <h1 onClick={()=>{showGuests()}} className="searchGuests">Search</h1>
           </div>
       </div>
 

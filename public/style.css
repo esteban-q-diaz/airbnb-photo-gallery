@@ -198,6 +198,8 @@ input[class="navSearch"], input[type="reset"] {
 
 .location-true::placeholder {
   padding-left: 22px;
+  position: absolute;
+  top: 35px;
 }
 
 .checkIn {
@@ -311,6 +313,8 @@ input[class="navSearch"], input[type="reset"] {
   position: relative;
   bottom: 90px;
   left: 255px;
+  top: -84px;
+  color: #868686;
 }
 
 .checkInTextDiv {
@@ -327,8 +331,9 @@ input[class="navSearch"], input[type="reset"] {
 .checkOutText2 {
   font-size: 12px;
   position: relative;
-  bottom: 141px;
   left: 400px;
+  top: -136px;
+  color: #868686;
 }
 
 .checkOutTextDiv {
@@ -515,10 +520,26 @@ img:hover {
 .btn {
   position: fixed;
   left: 79%;
-  bottom: 37%;
+  bottom: 49%;
   background-color: white;
   border-radius: 6px;
-  border: #fff;
+  border-color: #222222;
+  border-width: 1px;
+  padding: 5px;
+  font-size: 12px;
+  height: 30px;
+  width: 130px;
+  text-align: right;
+}
+
+.btn-true {
+  position: fixed;
+  left: 79%;
+  bottom: 41%;
+  background-color: white;
+  border-radius: 6px;
+  border-color: #222222;
+  border-width: 1px;
   padding: 5px;
   font-size: 12px;
   height: 30px;
@@ -549,8 +570,12 @@ img:hover {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding-right: 50px;
+  margin-top: 0px;
+  margin-right: 50px;
   padding-bottom: 40px;
+  position: relative;
+  background-color: #fff;
+  padding-top: -100px
 }
 
 .imgFlex1 {

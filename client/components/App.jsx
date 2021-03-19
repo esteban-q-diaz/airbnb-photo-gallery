@@ -1,14 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import PhotoGallery from './PhotoGallery';
 import NavBar from './NavBar'
 import SearchMenu from './SearchMenu';
 import { Route, BrowserRouter as Router, Link, Switch } from 'react-router-dom';
-import Images from './Images'
+import Images from './Images';
+import details from '/database/sample-data.js'
 
 function App() {
   const [searchMenu, setSearchMenu] = useState(false);
   const [modal, setModal] = useState(false)
+  const [imageGallery, setImageGallery] = useState(false)
+
+  // useEffect(() => {
+  //   console.log(details)
+  // })
+
   const showMenu = () => {
     console.log('i am here')
     setSearchMenu(prevState => !prevState)
@@ -18,14 +25,22 @@ function App() {
     setModal(p=>!p)
   }
 
+  const showGallery = () => {
+    setImageGallery(p=> !p)
+  }
+
 
 
   return (
 
     <div>
+        {imageGallery ? <Images showGallery={showGallery}/> :  null }
+        {searchMenu ? <SearchMenu /> : <NavBar showMenu={showMenu}/>}
+        <Header details={details}/>
+        <PhotoGallery searchMenu={searchMenu} setModal={setModal} showGallery={showGallery}/>
 
 
-<Router>
+{/* <Router>
       <Switch>
         <Route path="/images" exact>
           <Images />
@@ -34,11 +49,11 @@ function App() {
         <Route path="/" exact>
           {searchMenu ? <SearchMenu /> : <NavBar showMenu={showMenu}/>}
           <Header />
-          <PhotoGallery setModal={setModal}/>
+          <PhotoGallery setModal={setModal} />
         </Route>
 
       </Switch>
-  </Router>
+  </Router> */}
 </div>
 
   )

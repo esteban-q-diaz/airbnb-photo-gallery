@@ -1,49 +1,49 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {AiTwotoneStar} from "react-icons/ai";
 import { FiShare } from "react-icons/fi";
 import { BsHeart } from "react-icons/bs";
 
-function Header() {
+function Header( { details } ) {
   return (
 
     <div>
-      <div class="header">
-      <h1>Piha Surf Shack</h1>
+      <div className="header">
+      <h1>{details[0].title}</h1>
       </div>
-      <div class="flex">
-        <div class="star">
+      <div className="flex">
+        <div className="star">
           <AiTwotoneStar color="red"/>
         </div>
 
-        <div class="header-1">
-          <p>4.98 (41) ·</p>
+        <div className="header-1">
+          <p>{`${details[0].ratingAverage} (${details[0].reviews}) `}·</p>
         </div>
 
-        <div class="header-2">
-          <p>Superhost ·</p>
+        <div className="header-2">
+          <p>{details[0].status} ·</p>
         </div>
 
-        <div class="header-3">
-          <a href="">Piha, Auckland, New Zealand</a>
+        <div className="header-3">
+          <a href="">{details[0].location} </a>
         </div>
 
 
-      <div class="flexTwo">
-        <div class="header-4">
-          <a href="" class='share'>Share</a>
+      <div className="flexTwo">
+        <div className="header-4">
+          <a href="" className='share'>Share</a>
         </div>
 
-        <div class="saveIcon">
-          <FiShare class="saveIcon" size={15} />
+        <div className="saveIcon">
+          <FiShare className="saveIcon" size={15} />
         </div>
 
         </div>
- <div class="header-5">
+ <div className="header-5">
           <a href="">Save</a>
         </div>
 
-        <div class="shareIcon">
-          <BsHeart class="shareIcon" size={15} />
+        <div className="shareIcon">
+          <BsHeart className="shareIcon" size={15} />
         </div>
  </div>
     </div>

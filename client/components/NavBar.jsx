@@ -5,41 +5,41 @@ import { FiShare } from "react-icons/fi";
 
 function NavBar({ showMenu }) {
   return (
-    <div class='container'>
-      <div class="navFlex">
-        <div class="flexLogo">
-          <img class='airlogo' src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c513.png" />
+    <div className='container'>
+      <div className="navFlex">
+        <div className="flexLogo">
+          <img className='airlogo' src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c513.png" />
         </div>
 
-      <div class="flexSearch">
-        <input type="submit" value="Start your search" class="navSearch" name="search" onClick={() => showMenu()}/>
+      <div className="flexSearch">
+        <input type="submit" value="Start your search" className="navSearch" name="search" onClick={() => showMenu()}/>
       </div>
 
 
-      <div class='searchIcon'>
+      <div className='searchIcon'>
         <IoSearchCircle color="red"  size={45} />
       </div>
 
-      <div class='userIcon'>
+      <div className='userIcon'>
         <FaUserCircle size={30} />
       </div>
 
-      <div class="flexHost">
-        <h1 class="host">Become a host</h1>
+      <div className="flexHost">
+        <h1 className="host">Become a host</h1>
       </div>
 
-      <div class="flexWeb">
-        <img class="webIcon" src="https://www.flaticon.com/svg/vstatic/svg/876/876759.svg?token=exp=1615939427~hmac=a08d7e728c038642643e069345a57dde" />
+      <div className="flexWeb">
+        <img className="webIcon" src="https://airbnb-clone-airbnb-be-my-first-job.s3-us-west-1.amazonaws.com/global.png" />
       </div>
 
-      <div class='flexButton'>
-        <input type="button" class="navButton"></input>
+      <div className='flexButton'>
+        <input type="button" className="navButton"></input>
       </div>
 
-      <div class="burgerIcon">
-        <div class="hamburger"></div>
-        <div class="hamburger"></div>
-        <div class="hamburger"></div>
+      <div className="burgerIcon">
+        <div className="hamburger"></div>
+        <div className="hamburger"></div>
+        <div className="hamburger"></div>
       </div>
       </div>
 
