@@ -1,8 +1,8 @@
 const details = [
   {
     productId: 10001,
-    title: 'Piha Surf Shack',
-    location: 'Piha, Aukland, New Zealand',
+    title: 'Paradise Central',
+    location: 'Wailea, Maui, Hawaii',
     ratingAverage: 4.98,
     reviews: 41,
     status: 'Superhost',

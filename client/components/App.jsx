@@ -1,5 +1,3 @@
-/* eslint-disable prefer-const */
-/* eslint-disable no-console */
 import React, { useEffect, useState } from 'react';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import axios from 'axios';
@@ -33,14 +31,14 @@ function App() {
     <div>
       <Router>
         <Switch>
-          <Route path="/images" exact>
-            <Images />
-          </Route>
-
           <Route path="/" exact>
             {searchMenu ? <SearchMenu /> : <NavBar showMenu={showMenu} />}
             <Header airbnbSite={airbnbSite} />
             <PhotoGallery searchMenu={searchMenu} />
+          </Route>
+
+          <Route path="/images" exact>
+            <Images />
           </Route>
 
         </Switch>
