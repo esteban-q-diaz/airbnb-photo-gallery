@@ -6,13 +6,10 @@ const path = require('path');
 
 const app = express();
 const bodyParser = require('body-parser');
-
 const { getAirbnbSite } = require('../database/index.js');
 
 app.use('/', express.static(path.join(__dirname, '..', 'public')));
-
 app.use(bodyParser.urlencoded({ extended: false }));
-
 app.use(bodyParser.json());
 
 app.get('/getdetails/:productId', (req, res) => {

@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-function PhotoGallery() {
+function PhotoGallery({ searchMenu }) {
   return (
     <div>
       <div className="imageContainer">
@@ -30,11 +31,15 @@ function PhotoGallery() {
         </div>
       </div>
       <Link to="/images">
-        <input type="submit" className="btn" value="Show All Photos" />
+        <input type="submit" className={`btn btn-${searchMenu}`} value="Show All Photos" />
       </Link>
 
     </div>
   );
 }
+
+PhotoGallery.propTypes = {
+  searchMenu: PropTypes.instanceOf(Object).isRequired,
+};
 
 export default PhotoGallery;

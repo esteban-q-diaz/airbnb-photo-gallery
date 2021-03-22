@@ -40,7 +40,7 @@ function App() {
           <Route path="/" exact>
             {searchMenu ? <SearchMenu /> : <NavBar showMenu={showMenu} />}
             <Header airbnbSite={airbnbSite} />
-            <PhotoGallery />
+            <PhotoGallery searchMenu={searchMenu} />
           </Route>
 
         </Switch>
