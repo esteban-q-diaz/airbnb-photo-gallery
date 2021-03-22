@@ -532,21 +532,6 @@ img:hover {
   text-align: right;
 }
 
-.btn-true {
-  position: fixed;
-  left: 79%;
-  bottom: 41%;
-  background-color: white;
-  border-radius: 6px;
-  border-color: #222222;
-  border-width: 1px;
-  padding: 5px;
-  font-size: 12px;
-  height: 30px;
-  width: 130px;
-  text-align: right;
-}
-
 .btn:hover {
   cursor: pointer;
 }

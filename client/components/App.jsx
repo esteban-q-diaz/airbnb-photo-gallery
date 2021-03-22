@@ -1,67 +1,52 @@
-import React, { useState, useEffect } from 'react';
+/* eslint-disable prefer-const */
+/* eslint-disable no-console */
+import React, { useEffect, useState } from 'react';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import axios from 'axios';
 import Header from './Header';
 import PhotoGallery from './PhotoGallery';
-import NavBar from './NavBar'
+import NavBar from './NavBar';
 import SearchMenu from './SearchMenu';
-import { Route, BrowserRouter as Router, Link, Switch } from 'react-router-dom';
 import Images from './Images';
-import details from '/database/sample-data.js';
-import axios from 'axios';
+import details from '../../database/sample-data';
 
 function App() {
   const [searchMenu, setSearchMenu] = useState(false);
-  const [modal, setModal] = useState(false)
-  const [imageGallery, setImageGallery] = useState(false)
+  let [airbnbSite, setAirbnbSite] = useState(details);
 
-  // useEffect(() => {
-  //   console.log(details)
-  // })
-
-  // axios.get('http://localhost:3030/getdetails')
-  //   .then(()=> console.log('we got it'))
-  //   .catch(()=> console.log('we dont got it'))
+  useEffect(() => {
+    axios.get('http://localhost:3000/getdetails/10001')
+      .then((res) => {
+        setAirbnbSite(airbnbSite = res.data);
+      })
+      .catch((err) => {
+        console.log('error at axios get request', err);
+      });
+  }, []);
 
   const showMenu = () => {
-    console.log('i am here')
-    setSearchMenu(prevState => !prevState)
-  }
-
-  const showModal = () => {
-    setModal(p=>!p)
-  }
-
-  const showGallery = () => {
-    setImageGallery(p=> !p)
-  }
-
-
+    setSearchMenu((prevState) => !prevState);
+  };
 
   return (
 
     <div>
-        {/* {imageGallery ? <Images showGallery={showGallery}/> :  null }
-        {searchMenu ? <SearchMenu /> : <NavBar showMenu={showMenu}/>}
-        <Header details={details}/>
-        <PhotoGallery searchMenu={searchMenu} setModal={setModal} showGallery={showGallery}/> */}
+      <Router>
+        <Switch>
+          <Route path="/images" exact>
+            <Images />
+          </Route>
 
+          <Route path="/" exact>
+            {searchMenu ? <SearchMenu /> : <NavBar showMenu={showMenu} />}
+            <Header airbnbSite={airbnbSite} />
+            <PhotoGallery />
+          </Route>
 
-<Router>
-      <Switch>
-        <Route path="/images" exact>
-          <Images />
-        </Route>
-
-        <Route path="/" exact>
-          {searchMenu ? <SearchMenu /> : <NavBar showMenu={showMenu}/>}
-          <Header details={details}/>
-          <PhotoGallery setModal={setModal} />
-        </Route>
-
-      </Switch>
-  </Router>
-</div>
-
-  )
+        </Switch>
+      </Router>
+    </div>
+  );
 }
 
-export default App
+export default App;

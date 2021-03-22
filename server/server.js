@@ -1,35 +1,36 @@
-const express = require('express')
-const PORT = 3000;
-const path = require('path')
-const app = express();
-var bodyParser = require('body-parser')
+/* eslint-disable no-console */
+const express = require('express');
 
-//this is needed to make the public folder available to the server
+const PORT = 3000;
+const path = require('path');
+
+const app = express();
+const bodyParser = require('body-parser');
+
+const { getAirbnbSite } = require('../database/index.js');
+
 app.use('/', express.static(path.join(__dirname, '..', 'public')));
 
-// parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: false }));
 
-// parse application/json
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 
-app.get('/*', function(req, res) {
-  res.sendFile(path.join(__dirname, '../public/index.html'), function(err) {
+app.get('/getdetails/:productId', (req, res) => {
+  const { productId } = req.params;
+
+  getAirbnbSite(productId, (err, results) => {
     if (err) {
-      res.status(500).send(err)
+      res.send(404);
+    } else {
+      res.send(results);
     }
-  })
-})
-
-// app.get('/getdetails', function(req, res) {
-//   res.send(202)
-// })
-
+  });
+});
 
 app.listen(PORT, (err) => {
   if (err) {
-    console.log('error at server', err)
+    console.log('error at server', err);
   } else {
-    console.log(`Server running on localhost:${PORT}`)
+    console.log(`Server running on localhost:${PORT}`);
   }
-})
+});

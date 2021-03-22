@@ -1,11 +1,25 @@
 const mysql = require('mysql');
-import sampleData from './sample-data.js'
+const { connectionData } = require('./mysql.config');
 
-var connection = mysql.createConnection({
-  host     : sampleData.localhost,
-  user     : sampleData.user,
-  password : sampleData.password,
-  database : sampleData.airbnb,
+const connection = mysql.createConnection({
+  host: connectionData.localhost,
+  user: connectionData.user,
+  password: connectionData.password,
+  database: connectionData.database,
 });
 
-module.exports = conneciton;
+const getAirbnbSite = (productId, callback) => {
+  const query = 'select * from details where productId = ?';
+
+  connection.query(query, productId, (err, results) => {
+    if (err) {
+      callback(err);
+    } else {
+      callback(null, results);
+    }
+  });
+};
+
+module.exports = {
+  connection, getAirbnbSite,
+};

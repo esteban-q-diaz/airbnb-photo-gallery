@@ -1,140 +1,154 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React, { useState } from 'react';
-import { IoSearchCircle } from "react-icons/io5";
-import { BiSearch } from "react-icons/bi";
-import { FaUserCircle } from "react-icons/fa";
+import { BiSearch } from 'react-icons/bi';
+import { FaUserCircle } from 'react-icons/fa';
 
 function SearchMenu() {
-  const [location, setLocation] = useState(true)
-  const [checkIn, setCheckIn] = useState(false)
-  const [checkOut, setCheckOut] = useState(false)
-  const [guests, setGuests] = useState(false)
+  const [location, setLocation] = useState(true);
+  const [checkIn, setCheckIn] = useState(false);
+  const [checkOut, setCheckOut] = useState(false);
+  const [guests, setGuests] = useState(false);
 
   const showLocation = () => {
-    setLocation(prevState => !prevState)
-    setCheckIn(prevState => false)
-    setCheckOut(prevState => false)
-    setGuests(prevState => false)
-  }
+    setLocation((prevState) => !prevState);
+    setCheckIn(() => false);
+    setCheckOut(() => false);
+    setGuests(() => false);
+  };
   const showCheckIn = () => {
-    setCheckIn(prevState => !prevState)
-    setLocation(prevState => false)
-    setCheckOut(prevState => false)
-    setGuests(prevState => false)
-  }
+    setCheckIn((prevState) => !prevState);
+    setLocation(() => false);
+    setCheckOut(() => false);
+    setGuests(() => false);
+  };
   const showCheckOut = () => {
-    setCheckOut(prevState => !prevState)
-    setCheckIn(prevState => false)
-    setLocation(prevState => false)
-    setGuests(prevState => false)
-  }
+    setCheckOut((prevState) => !prevState);
+    setCheckIn(() => false);
+    setLocation(() => false);
+    setGuests(() => false);
+  };
   const showGuests = () => {
-    setGuests(prevState => !prevState)
-    setCheckIn(prevState => false)
-    setLocation(prevState => false)
-    setCheckOut(prevState => false)
-  }
+    setGuests((prevState) => !prevState);
+    setCheckIn(() => false);
+    setLocation(() => false);
+    setCheckOut(() => false);
+  };
 
   return (
-    <div className='container'>
+    <div className="container">
       <div className="flexOuter">
-      <div className="navFlex">
-        <div className="flexLogo">
-          <img className='airlogo' src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c513.png" />
+        <div className="navFlex">
+          <div className="flexLogo">
+            <img className="airlogo" src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c513.png" alt="missing" />
+          </div>
+          <div className="places">
+            <p className="placeText">Place to stay</p>
+          </div>
+          <div className="experience2">
+            <p className="experienceText">Experience</p>
+          </div>
+
+          <div className="userIcon2">
+            <FaUserCircle size={30} />
+          </div>
+          <div className="flexHost">
+            <h1 className="host">Become a host</h1>
+          </div>
+
+          <div className="flexWeb">
+            <img className="webIcon" src="https://airbnb-clone-airbnb-be-my-first-job.s3-us-west-1.amazonaws.com/global.png" alt="missing" />
+          </div>
+
+          <div className="flexButton">
+            <input type="button" className="navButton" />
+          </div>
+
+          <div className="burgerIcon2">
+            <div className="hamburger" />
+            <div className="hamburger" />
+            <div className="hamburger" />
+          </div>
         </div>
-
-      <div className="places">
-        <p className="placeText">Place to stay</p>
-      </div>
-      <div className="experience2">
-        <p className="experienceText">Experience</p>
-      </div>
-
-      <div className='userIcon2'>
-        <FaUserCircle size={30} />
-      </div>
-
-
-      <div className="flexHost">
-        <h1 className="host">Become a host</h1>
-      </div>
-
-      <div className="flexWeb">
-        <img className="webIcon" src="https://airbnb-clone-airbnb-be-my-first-job.s3-us-west-1.amazonaws.com/global.png" />
-      </div>
-
-      <div className='flexButton'>
-        <input type="button" className="navButton"></input>
-      </div>
-
-      <div className="burgerIcon2">
-        <div className="hamburger"></div>
-        <div className="hamburger"></div>
-        <div className="hamburger"></div>
-      </div>
-      </div>
-
-
-
 
         <div className="dropDownBackground">
           <div className="dropFlex">
-          <div className="t">
-            <input type="input" className={`location location-${location}`} placeholder="Where are you going?" />
+            <div className="t">
+              <input type="input" className={`location location-${location}`} placeholder="Where are you going?" />
+            </div>
+
+            <div>
+              <input type="button" className={`checkIn checkIn-${checkIn}`} />
+            </div>
+
+            <div>
+              <input type="button" className={`checkOut checkOut-${checkOut}`} />
+            </div>
+
+            <div className={`guestsClick guestsDiv guestsDiv-${guests}`}>
+              <input type="button" className={`guests guests-${guests}`} />
+            </div>
+
+            <div className="searchClick">
+              <input type="button" className="searchBtn" />
+              <BiSearch className="glass" color="#fff" size={22} />
+            </div>
           </div>
 
-          <div>
-            <input type="button" className="checkIn" className={`checkIn checkIn-${checkIn}`} />
+          <div className="locationTextDiv">
+            <h1
+              onClick={() => { showLocation(); }}
+              className="locationText"
+            >
+              Location
+            </h1>
+
           </div>
 
-          <div>
-            <input type="button" className="checkOut" className={`checkOut checkOut-${checkOut}`}></input>
-          </div>
-
-          <div className="guestsClick" className={`guestsDiv guestsDiv-${guests}`}>
-            <input type="button" className="guests" className={`guests guests-${guests}`} />
-          </div>
-
-          <div className="searchClick" >
-            <input type="button" className="searchBtn"/>
-            <BiSearch className="glass" color="#fff" size={22} />
-          </div>
-
-
-
-
-        </div>
-
-          <div className="locationTextDiv"  >
-            <h1 onClick={()=>{showLocation()}} className="locationText">Location</h1>
-            
-          </div>
-
-          <div className="checkInTextDiv"  >
-            <h1 onClick={()=>{showCheckIn()}} className="checkInText">Check in</h1>
+          <div className="checkInTextDiv">
+            <h1
+              onClick={() => { showCheckIn(); }}
+              onKeyPress={() => { showCheckIn(); }}
+              className="checkInText"
+            >
+              Check in
+            </h1>
             <p className="checkInText2">Add Dates</p>
           </div>
 
-          <div className="checkOutTextDiv" >
-            <h1 onClick={()=>{showCheckOut()}}  className="checkOutText">Check out</h1>
+          <div className="checkOutTextDiv">
+            <h1
+              onClick={() => { showCheckOut(); }}
+              className="checkOutText"
+            >
+              Check out
+            </h1>
             <p className="checkOutText2">Add Dates</p>
           </div>
 
-
-          <div className="guestTextDiv" o >
-            <h1 onClick={()=>{showGuests()}} className="guestText">Guests</h1>
+          <div className="guestTextDiv">
+            <h1
+              onClick={() => { showGuests(); }}
+              className="guestText"
+            >
+              Guests
+            </h1>
             <p className="guestText2">Add Guests</p>
           </div>
 
-          <div className="searchGuestsDiv" >
-            <h1 onClick={()=>{showGuests()}} className="searchGuests">Search</h1>
+          <div className="searchGuestsDiv">
+            <h1
+              onClick={() => { showGuests(); }}
+              className="searchGuests"
+            >
+              Search
+            </h1>
           </div>
-      </div>
-
-
+        </div>
 
       </div>
     </div>
-  )
+  );
 }
 
-export default SearchMenu
+export default SearchMenu;
