@@ -13,15 +13,15 @@ function App() {
   const [searchMenu, setSearchMenu] = useState(false);
   let [airbnbSite, setAirbnbSite] = useState(details);
 
-  useEffect(() => {
-    axios.get('http://localhost:3000/getdetails/10001')
-      .then((res) => {
-        setAirbnbSite(airbnbSite = res.data);
-      })
-      .catch((err) => {
-        console.log('error at axios get request', err);
-      });
-  }, []);
+  // useEffect(() => {
+  //   axios.get('http://localhost:3000/getdetails/10001')
+  //     .then((res) => {
+  //       setAirbnbSite(airbnbSite = res.data);
+  //     })
+  //     .catch((err) => {
+  //       console.log('error at axios get request', err);
+  //     });
+  // }, []);
 
   const showMenu = () => {
     setSearchMenu((prevState) => !prevState);
