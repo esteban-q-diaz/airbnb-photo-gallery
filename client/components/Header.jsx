@@ -35,23 +35,23 @@ function Header({ airbnbSite }) {
           </a>
         </div>
 
-        <div className="flexTwo">
+        {/* <div className="flexTwo"> */}
+
+          <div className="share-icon-container">
+            <FiShare className="shareIcon" size={15} />
+          </div>
+
           <div className="header-4">
             <a href="https://www.airbnb.com/" className="share">Share</a>
           </div>
 
-          <div className="saveIcon">
-            <FiShare className="saveIcon" size={15} />
+          <div className="save-icon-container">
+            <BsHeart className="saveIcon" size={15} />
           </div>
-        </div>
-
-        <div className="header-5">
-          <a href="https://www.airbnb.com/">Save</a>
-        </div>
-
-        <div className="shareIcon">
-          <BsHeart className="shareIcon" size={15} />
-        </div>
+          <div className="header-5">
+            <a href="https://www.airbnb.com/">Save</a>
+          </div>
+        {/* </div> */}
       </div>
     </div>
   );

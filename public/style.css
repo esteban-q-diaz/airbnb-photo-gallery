@@ -35,6 +35,7 @@ html {
 }
 
 .flexSearch {
+  display: flex;
   flex-basis: 480px;
 }
 
@@ -47,12 +48,7 @@ html {
   border-style: solid;
   text-align: left;
   color: #222222;
-}
-
-.searchIcon {
-  position: absolute;
-  top: 21px;
-  right: 479px;
+  margin-right: -50px;
 }
 
 input[class="navSearch"], input[type="reset"] {
@@ -71,16 +67,12 @@ input[class="navSearch"], input[type="reset"] {
 }
 
 .burgerIcon {
-  position: absolute;
-  right: 118px;
-  top: 34px;
+  margin-left: -62px;
 }
 
 .userIcon {
-  position: absolute;
-  right: 79px;
-  top: 28px;
   color: #717171;
+  margin-left: 7px;
 }
 
 .burgerIcon2 {
@@ -94,6 +86,11 @@ input[class="navSearch"], input[type="reset"] {
   right: 79px;
   top: 32px;
   color: #717171;
+}
+
+.host-container {
+  display: flex;
+  align-items: center;
 }
 
 .hamburger {
@@ -148,13 +145,15 @@ input[class="navSearch"], input[type="reset"] {
 }
 
 .flexHost {
-  flex-basis: 100px;
+  flex-basis: 200px;
+  margin-right: 10px;
 }
 .host {
   font-size: 12px;
 }
 .flexWeb {
   flex-basis: 30px;
+  margin-right: 10px;
 }
 
 .dropDownBackground {
@@ -284,9 +283,9 @@ input[class="navSearch"], input[type="reset"] {
 
 .glass {
   margin-left: -20px;
-  position: absolute;
-  top: 113px;
-  right: 390px
+  position: relative;
+  left: 620px;
+  bottom: 232PX;
 }
 
 .locationTextDiv {
@@ -358,9 +357,10 @@ input[class="navSearch"], input[type="reset"] {
 .searchGuests {
   position: relative;
   left: 680px;
-  bottom: 230px;
+  bottom: 240PX;
   color: #fff;
   font-size: 16px;
+  z-index: 99;
 }
 
 .searchGuests2 {
@@ -368,6 +368,10 @@ input[class="navSearch"], input[type="reset"] {
   left: 555px;
   top: -195px;
   color: #868686;
+}
+
+.searchGuestsDiv {
+  display: flex;
 }
 
 
@@ -394,17 +398,16 @@ input[class="navSearch"], input[type="reset"] {
   display: flex;
   flex-direction: row;
   align-items: 'center';
-  justify-content: center;
   margin-left: 68px;
   justify-content: flex-start;
   margin-bottom: 10px;
+  align-items: center;
 }
 
 .star{
   padding-right: 0.2%;
   align-items: center;
   justify-content: center;
-  margin-top: 12px;
 }
 
 .header-1 {
@@ -417,7 +420,6 @@ input[class="navSearch"], input[type="reset"] {
 }
 
 .header-3 {
-  padding-top: 11px;
   color: grey;
 }
 
@@ -429,36 +431,29 @@ input[class="navSearch"], input[type="reset"] {
 .flexTwo {
   display: flex;
   flex-direction: row;
-  align-items: 'center';
-  justify-content: center;
-  margin-left: 664px;
-  justify-content: flex-start;
-
+  align-items: center;
+  width: 72%;
+  justify-content: flex-end;
 }
 
 .header-4 {
-  flex-basis: 4;
-  margin-top: 15px;
-  padding-left: 221%;
-  padding-right: 2px;
+  margin-right: 15px;
 }
 
-.saveIcon {
-  position: relative;
-  right: 61px;
-  top: 7px;
+.save-icon-container {
+  margin-right: 10px;
+}
+
+.share-icon-container {
+  margin-left: 780px;
+  margin-right: 10px;
 }
 
 .shareIcon {
 
-  position: relative;
-  right: 85px;
-  top: 7px;
 }
 
 .header-5 {
-  flex: 1;
-  margin-top: 15px;
 }
 
 .header-4, .header-5, a {
@@ -485,10 +480,8 @@ input[class="navSearch"], input[type="reset"] {
 /* Photo Gallery*/
 .imageContainer {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  margin-left: 67px;
 }
 
 .imageFlex {
@@ -514,13 +507,24 @@ input[class="navSearch"], input[type="reset"] {
 
 img:hover {
   cursor: pointer;
-  -webkit-filter: brightness(70%);
-  filter: brightness(80%);
+  /* -webkit-filter: brightness(70%);
+  filter: brightness(80%); */
+  z-index: -1;
 }
+
+.show-more-imgs {
+  background: red;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 1100px;
+  margin-top: -100px;
+  width: 10%;
+}
+
 .btn {
-  position: fixed;
+  /* position: fixed;
   left: 79%;
-  bottom: 49%;
+  bottom: 49%; */
   background-color: white;
   border-radius: 6px;
   border-color: #222222;
@@ -533,9 +537,6 @@ img:hover {
 }
 
 .btn-true {
-  position: fixed;
-  left: 79%;
-  bottom: 41%;
   background-color: white;
   border-radius: 6px;
   border-color: #222222;

@@ -30,9 +30,11 @@ function PhotoGallery({ searchMenu }) {
           </div>
         </div>
       </div>
+      <div className="show-more-imgs">
       <Link to="/images">
         <input type="submit" className={`btn btn-${searchMenu}`} value="Show All Photos" />
       </Link>
+      </div>
 
     </div>
   );

@@ -12,33 +12,36 @@ function NavBar({ showMenu }) {
         </div>
 
         <div className="flexSearch">
-          <input type="submit" value="Start your search" className="navSearch" name="search" onClick={() => showMenu()} />
+          <div>
+            <input type="submit" value="Start your search" className="navSearch" name="search" onClick={() => showMenu()} />
+          </div>
+          <div className="searchIcon">
+            <IoSearchCircle color="red" size={45} />
+          </div>
         </div>
 
-        <div className="searchIcon">
-          <IoSearchCircle color="red" size={45} />
-        </div>
+        <div className="host-container">
+          <div className="flexHost">
+            <h1 className="host">Become a host</h1>
+          </div>
 
-        <div className="userIcon">
-          <FaUserCircle size={30} />
-        </div>
+          <div className="flexWeb">
+            <img className="webIcon" src="https://airbnb-clone-airbnb-be-my-first-job.s3-us-west-1.amazonaws.com/global.png" alt="missing" />
+          </div>
 
-        <div className="flexHost">
-          <h1 className="host">Become a host</h1>
-        </div>
+          <div className="flexButton">
+            <input type="button" className="navButton" />
+          </div>
 
-        <div className="flexWeb">
-          <img className="webIcon" src="https://airbnb-clone-airbnb-be-my-first-job.s3-us-west-1.amazonaws.com/global.png" alt="missing" />
-        </div>
+          <div className="burgerIcon">
+            <div className="hamburger" />
+            <div className="hamburger" />
+            <div className="hamburger" />
+          </div>
 
-        <div className="flexButton">
-          <input type="button" className="navButton" />
-        </div>
-
-        <div className="burgerIcon">
-          <div className="hamburger" />
-          <div className="hamburger" />
-          <div className="hamburger" />
+          <div className="userIcon">
+            <FaUserCircle size={30} />
+          </div>
         </div>
       </div>
     </div>

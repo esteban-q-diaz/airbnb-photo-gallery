@@ -1,30 +1,42 @@
-# airbnb-photo-gallery
+# REI Clone (Customer Reviews Microservice)
 
-For this project I wanted to recreate the AirBnb NavBar and Photo Gallery section of the AirBnb location details page. AirBnb's UI design is creative and innovative - it was really fun implementing some of those UI elements.
+Collaborated with a team of 3 to create a Full Stack REI Clone Application with full functionality.  To establish a successful workflow we created a clear code of conduct, practiced Agile workflow to meet delivarables.  The results were an REI Clone application that closely resembles the actual REI Page.
 
-# Demo:
+Deployed here: https://rei-reviews-clone.herokuapp.com/
 
-![](https://airbnb-clone-2021.s3-us-west-1.amazonaws.com/Airbnb-clone.gif)
+# Customer Review Section
 
-## Step 1
-* Establish a schema for MySQL database / add data points to the database
-* Create a visual of the overall idea and routes of the Application
+My contribution to the team was the REI Customer Reviews section.  I implemented the following
 
-## Step 2
-* Create a rough draft of the AirBnb site with all aspects in place using hard coded data
-* At this stage I did not include any CSS. I mainly focused on getting the information of the photo gallery and navigation bar down.
+* New Review submission modal with full functionatlity - allows users to post reviews and see them rendered immediately
+* Sort by star review
+* Filter by Most Recent, Most Relevant, Most Helpful, Highest to Lowest, Lowest to Highest
+* Add to helpful count (yes/no)
+* Load more pagination - loads 12 reviews at a time
 
-## Step 3
-* Start adding CSS to make the application look like the original
-* One of the biggest design challenges was recreating the AirBnb drop down seach menu - but once I finished, it was worth the hours spent on it!
+# DEMO
 
-## Step 4
-* Implement React router to navigate to and from the "show all photos"
+![Clone Demo](https://rei-bucket-fec.s3-us-west-1.amazonaws.com/rei-1.gif)
 
-## Step 5
-* Generate an Express server
-* Establish a functional connection between the Client, Server and Database
-* Pull data from Database and render it onto the client
+### Sort By Feature
+
+![Clone Demo](https://rei-bucket-fec.s3-us-west-1.amazonaws.com/rei-2.gif)
+
+### Filter by Star Reviews
+
+![Clone Demo](https://rei-bucket-fec.s3-us-west-1.amazonaws.com/rei-3.gif)
+
+### Clear Filters
+
+![Clone Demo](https://rei-bucket-fec.s3-us-west-1.amazonaws.com/rei-4.gif)
+
+### Pagination - load more
+
+![Clone Demo](https://rei-bucket-fec.s3-us-west-1.amazonaws.com/rei-5.gif)
+
+### Write a reivew - Linked to Database
+
+![Clone Demo](https://rei-bucket-fec.s3-us-west-1.amazonaws.com/rei-6.gif)
 
 # Setup
 
@@ -32,12 +44,15 @@ For this project I wanted to recreate the AirBnb NavBar and Photo Gallery sectio
 * npm run seed
 * npm run build
 * npm start
+* brew services start mongodb-community@4.4
 
 # Tech Stack
 
 * ReactJS
 * NodeJS
 * Express
-* MySQL
+* MongoDb
 * Axios
 * Webpack
+* Docker
+* Jest / Chai / Enzyme

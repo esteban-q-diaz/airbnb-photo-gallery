@@ -49,25 +49,28 @@ function SearchMenu() {
             <p className="experienceText">Experience</p>
           </div>
 
-          <div className="userIcon2">
-            <FaUserCircle size={30} />
-          </div>
-          <div className="flexHost">
-            <h1 className="host">Become a host</h1>
-          </div>
+          <div className="host-container">
+            <div className="flexHost">
+              <h1 className="host">Become a host</h1>
+            </div>
 
-          <div className="flexWeb">
-            <img className="webIcon" src="https://airbnb-clone-airbnb-be-my-first-job.s3-us-west-1.amazonaws.com/global.png" alt="missing" />
-          </div>
+            <div className="flexWeb">
+              <img className="webIcon" src="https://airbnb-clone-airbnb-be-my-first-job.s3-us-west-1.amazonaws.com/global.png" alt="missing" />
+            </div>
 
-          <div className="flexButton">
-            <input type="button" className="navButton" />
-          </div>
+            <div className="flexButton">
+              <input type="button" className="navButton" />
+            </div>
 
-          <div className="burgerIcon2">
-            <div className="hamburger" />
-            <div className="hamburger" />
-            <div className="hamburger" />
+            <div className="burgerIcon">
+              <div className="hamburger" />
+              <div className="hamburger" />
+              <div className="hamburger" />
+            </div>
+
+            <div className="userIcon">
+              <FaUserCircle size={30} />
+            </div>
           </div>
         </div>
 
@@ -89,10 +92,6 @@ function SearchMenu() {
               <input type="button" className={`guests guests-${guests}`} />
             </div>
 
-            <div className="searchClick">
-              <input type="button" className="searchBtn" />
-              <BiSearch className="glass" color="#fff" size={22} />
-            </div>
           </div>
 
           <div className="locationTextDiv">
@@ -137,12 +136,25 @@ function SearchMenu() {
           </div>
 
           <div className="searchGuestsDiv">
-            <h1
-              onClick={() => { showGuests(); }}
-              className="searchGuests"
-            >
-              Search
-            </h1>
+
+            <div className="searchClick">
+              <input type="button" className="searchBtn" />
+            </div>
+
+            <div>
+              <h1
+                onClick={() => { showGuests(); }}
+                className="searchGuests"
+              >
+                Search
+              </h1>
+            </div>
+
+            <div>
+              <BiSearch className="glass" color="#FFF" size={22} />
+            </div>
+
+
           </div>
         </div>
 
