@@ -2,7 +2,7 @@
 
 Collaborated with a team of 3 to create a Full Stack REI Clone Application with full functionality.  To establish a successful workflow we created a clear code of conduct, practiced Agile workflow to meet delivarables.  The results were an REI Clone application that closely resembles the actual REI Page.
 
-Deployed here: https://rei-reviews-clone.herokuapp.com/
+Deployed here:  https://github.com/esteban-q-diaz/airbnb-photo-gallery
 
 # Customer Review Section
 
