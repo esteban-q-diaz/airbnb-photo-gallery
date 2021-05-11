@@ -513,7 +513,6 @@ img:hover {
 }
 
 .show-more-imgs {
-  background: red;
   display: flex;
   justify-content: flex-start;
   margin-left: 1100px;
