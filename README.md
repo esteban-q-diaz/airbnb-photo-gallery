@@ -8,7 +8,7 @@ Project deployed here: https://airbnb-gallery-clone.herokuapp.com/
 
 ### Main page
 
-![](https://airbnb-clone-2021.s3-us-west-1.amazonaws.com/airbnbpt1.gif)
+![](https://airbnb-clone-2021.s3-us-west-1.amazonaws.com/airbbnb_pt1.gif)
 
 ### Image Gallery
 
