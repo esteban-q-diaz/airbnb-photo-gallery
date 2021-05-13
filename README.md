@@ -6,7 +6,13 @@ Project deployed here: https://airbnb-gallery-clone.herokuapp.com/
 
 # Demo:
 
-![](https://airbnb-clone-2021.s3-us-west-1.amazonaws.com/Airbnb-clone.gif)
+### Main page
+
+![](https://airbnb-clone-2021.s3-us-west-1.amazonaws.com/airbnbpt1.gif)
+
+### Image Gallery
+
+![](https://airbnb-clone-2021.s3-us-west-1.amazonaws.com/airbnbpt2.gif)
 
 ## Step 1
 * Establish a schema for MySQL database / add data points to the database
