@@ -2,6 +2,8 @@
 
 For this project I wanted to recreate the AirBnb NavBar and Photo Gallery section of the AirBnb location details page. AirBnb's UI design is creative and innovative - it was really fun implementing some of those UI elements.
 
+Project deployed here: https://airbnb-gallery-clone.herokuapp.com/
+
 # Demo:
 
 ![](https://airbnb-clone-2021.s3-us-west-1.amazonaws.com/Airbnb-clone.gif)
