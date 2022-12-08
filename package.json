@@ -24,9 +24,9 @@
   "homepage": "https://github.com/esteban-q-diaz/airbnb-photo-gallery#readme",
   "dependencies": {
     "axios": "^0.21.1",
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.20.1",
     "cors": "^2.8.5",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "mysql": "^2.18.1",
     "nodemon": "^2.0.7",
     "path": "^0.12.7",
